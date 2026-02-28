@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Horarios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <a href="PaginaPrincipal.html" class="btn btn-secondary mb-3">← Volver</a>
+        <h2>Gestión de Horarios</h2>
+        <hr>
+        
+        <div class="card mb-4">
+            <div class="card-body">
+                <form id="formHorario" class="row g-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Hora Salida</label>
+                        <input type="time" class="form-control" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Hora Llegada</label>
+                        <input type="time" class="form-control" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">ID Tren</label>
+                        <input type="number" class="form-control" placeholder="Ej: 2" required>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Guardar Horario</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <table class="table table-striped table-hover shadow-sm">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Salida</th>
+                    <th>Llegada</th>
+                    <th>Tren</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>06:00</td>
+                    <td>06:45</td>
+                    <td>Tren 1</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm">Editar</button>
+                        <button class="btn btn-danger btn-sm">Borrar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
