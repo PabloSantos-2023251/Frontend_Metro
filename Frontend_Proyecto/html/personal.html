@@ -1,0 +1,70 @@
+<!--Instrucciones: Usar este archivo y cambiar el nombre segun de la entidad que trabajen, luego duplicar o eliminar las
+columnas marcadas segun los atributos de la entidad y cambiar la clase activo dentro del div-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Gestión</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">MENÚ</div>
+            <a href="lineas.html">Lineas</a>
+            <a href="trenes.html">Trenes</a>
+            <a href="personal.html" class="active">Personal</a>
+            <a href="pasajeros.html">Pasajeros</a>
+            <a href="conductores.html">Conductores </a>
+            <a href="impacto.html">Impacto Trafico</a>
+            <a href="horarios.html">Horarios</a>
+            <a href="mantenimiento.html">Mantenimiento</a>
+            <a href="boletos.html">Boletos</a>
+            <a href="estaciones.html">Estaciones</a>
+        </nav>
+
+        <main class="content">
+            <header class="header">
+                <h1>Personal</h1>
+            </header>
+
+            <div class="action-bar">
+                <button>Crear</button>
+                <button>Editar</button>
+                <button>Eliminar</button>
+                <button>Buscar</button>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Pesonal</th>
+                            <th>Nombre</th>
+                            <th>Cargo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Pablo</td>
+                            <td>Gerente</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Miguel</td>
+                            <td>Conserje</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>
