@@ -1,0 +1,92 @@
+<!--Instrucciones: Usar este archivo y cambiar el nombre segun de la entidad que trabajen, luego duplicar o eliminar las
+columnas marcadas segun los atributos de la entidad y cambiar la clase activo dentro del div-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Gestión</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">MENÚ</div>
+            <!--Usar los nombres que a parecen en href="lineas.html por ejemplo para crear los nombres d elos archivos que les toca-->
+            <a href="lineas.html">Lineas</a>
+            <!--La parte donde dice "class="active" quitarle y cambiarla a donde esta la entidad que estan trabajando en el momento-->
+            <a href="trenes.html">Trenes</a>
+            <a href="personal.html">Personal</a>
+            <a href="pasajeros.html" class="active">Pasajeros</a>
+            <a href="conductores.html">Conductores </a>
+            <a href="impacto.html">Impacto Trafico</a>
+            <a href="horarios.html">Horarios</a>
+            <a href="mantenimiento.html">Mantenimiento</a>
+            <a href="boletos.html">Boletos</a>
+            <a href="estaciones.html">Estaciones</a>
+        </nav>
+
+        <main class="content">
+            <header class="header">
+                <h1>Pasajeros</h1>
+            </header>
+
+            <div class="action-bar">
+                <button>Registrar</button>
+                <button>Editar</button>
+                <button>Eliminar</button>
+                <button>Buscar</button>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Tipo de Pasajero</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Carlos Méndez</td>
+                            <td>Niño</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Roberto Alcatraz</td>
+                            <td>Adulto</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Sofía Ramírez</td>
+                            <td>Adulto</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Luis Herrera</td>
+                            <td>Niño</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Valeria Gómez</td>
+                            <td>Adulto</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Andrés Castillo</td>
+                            <td>Adulto</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>
