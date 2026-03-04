@@ -5,60 +5,61 @@
     <meta charset="UTF-8">
     <title>Gestión de Conductores</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="container">
-        <nav class="sidebar">
-            <div class="logo">MENÚ</div>
+    <div id="main-container" class="container-fluid d-flex p-0">
+        <nav id="sidebar" class="sidebar d-flex flex-column p-3">
+            <div id="sidebar-logo" class="logo text-center mb-4 fw-bold">MENÚ</div>
 
-            <a href="lineas.html">Lineas</a>
-            <a href="trenes.html">Trenes</a>
-            <a href="personal.html">Personal</a>
-            <a href="pasajeros.html">Pasajeros</a>
-            <a href="conductores.html" class="active">Conductores</a>
-            <a href="impacto.html">Impacto Trafico</a>
-            <a href="horarios.html">Horarios</a>
-            <a href="mantenimiento.html">Mantenimiento</a>
-            <a href="boletos.html">Boletos</a>
-            <a href="estaciones.html">Estaciones</a>
+            <a href="lineas.html" id="nav-lineas" class="nav-link">Lineas</a>
+            <a href="trenes.html" id="nav-trenes" class="nav-link">Trenes</a>
+            <a href="personal.html" id="nav-personal" class="nav-link">Personal</a>
+            <a href="pasajeros.html" id="nav-pasajeros" class="nav-link">Pasajeros</a>
+            <a href="conductores.html" id="nav-conductores" class="nav-link active">Conductores</a>
+            <a href="impacto.html" id="nav-impacto" class="nav-link">Impacto Trafico</a>
+            <a href="horarios.html" id="nav-horarios" class="nav-link">Horarios</a>
+            <a href="mantenimiento.html" id="nav-mantenimiento" class="nav-link">Mantenimiento</a>
+            <a href="boletos.html" id="nav-boletos" class="nav-link">Boletos</a>
+            <a href="estaciones.html" id="nav-estaciones" class="nav-link">Estaciones</a>
         </nav>
 
-        <main class="content">
-            <header class="header">
-                <h1>Gestión de Conductores</h1>
+        <main id="main-content" class="content flex-grow-1 p-4">
+            <header id="page-header" class="header mb-4">
+                <h1 class="h3 fw-bold">Gestión de Conductores</h1>
             </header>
 
-            <div class="action-bar">
-                <button>Crear</button>
-                <button>Editar</button>
-                <button>Eliminar</button>
-                <button>Buscar</button>
+            <div id="action-bar" class="action-bar d-flex gap-2 mb-4">
+                <button id="btn-crear" class="btn btn-primary">Crear</button>
+                <button id="btn-editar" class="btn btn-warning">Editar</button>
+                <button id="btn-eliminar" class="btn btn-danger">Eliminar</button>
+                <button id="btn-buscar" class="btn btn-secondary">Buscar</button>
             </div>
 
-            <div class="table-container">
-                <table>
-                    <thead>
+            <div id="table-container" class="table-container table-responsive">
+                <table id="conductores-table" class="table table-bordered table-hover align-middle">
+                    <thead class="table-dark">
                         <tr>
-                            <th>ID Conductor</th>
-                            <th>Nombre</th>
-                            <th>Licencia</th>
-                            <th>Estado</th>
+                            <th id="col-id">ID Conductor</th>
+                            <th id="col-nombre">Nombre</th>
+                            <th id="col-licencia">Licencia</th>
+                            <th id="col-estado">Estado</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
+                    <tbody id="conductores-tbody">
+                        <tr id="conductor-1">
                             <td>1</td>
                             <td>Carlos Pérez</td>
-                            <td>Tipo A</td>
-                            <td>Activo</td>
+                            <td><span class="badge bg-primary">Tipo A</span></td>
+                            <td><span class="badge bg-success">Activo</span></td>
                         </tr>
-                        <tr>
+                        <tr id="conductor-2">
                             <td>2</td>
                             <td>María López</td>
-                            <td>Tipo B</td>
-                            <td>Disponible</td>
+                            <td><span class="badge bg-info text-dark">Tipo B</span></td>
+                            <td><span class="badge bg-warning text-dark">Disponible</span></td>
                         </tr>
                     </tbody>
                 </table>
