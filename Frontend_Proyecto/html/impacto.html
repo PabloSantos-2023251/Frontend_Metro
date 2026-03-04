@@ -1,70 +1,58 @@
-<!--Instrucciones: Usar este archivo y cambiar el nombre segun de la entidad que trabajen, luego duplicar o eliminar las
-columnas marcadas segun los atributos de la entidad y cambiar la clase activo dentro del div-->
-
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <title>Panel de Gestión</title>
+    <title>Gestión de Impacto en Tráfico</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
+    <div class="container mt-4">
+        <a href="PaginaPrincipal.html" class="btn btn-secondary mb-3">← Volver</a>
+        <h2>Gestión de Impacto en Tráfico</h2>
+        <hr>
 
-    <div class="container">
-        <nav class="sidebar">
-            <div class="logo">MENÚ</div>
-            <a href="lineas.html">Lineas</a>
-            <a href="trenes.html">Trenes</a>
-            <a href="personal.html">Personal</a>
-            <a href="pasajeros.html">Pasajeros</a>
-            <a href="conductores.html">Conductores </a>
-            <a href="impacto.html" class="active">Impacto Trafico</a>
-            <a href="horarios.html">Horarios</a>
-            <a href="mantenimiento.html">Mantenimiento</a>
-            <a href="boletos.html">Boletos</a>
-            <a href="estaciones.html">Estaciones</a>
-        </nav>
-
-        <main class="content">
-            <header class="header">
-                <h1>Impacto en trafico</h1>
-            </header>
-
-            <div class="action-bar">
-                <button>Crear</button>
-                <button>Editar</button>
-                <button>Eliminar</button>
-                <button>Buscar</button>
+        <div class="card mb-4">
+            <div class="card-body">
+                <form id="formImpacto" class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Zona</label>
+                        <input type="text" class="form-control" placeholder="Ej: Zona 2" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Reducción (%)</label>
+                        <input type="text" class="form-control" placeholder="Ej: 20%" required>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Guardar Impacto</button>
+                    </div>
+                </form>
             </div>
+        </div>
 
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID Impacto</th>
-                            <th>Zona</th>
-                            <th>Reduccion</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Zona 2</td>
-                            <td>20%</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Zona 3</td>
-                            <td>15%</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </main>
+        <table class="table table-striped table-hover shadow-sm">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID Impacto</th>
+                    <th>Zona</th>
+                    <th>Reducción</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Zona 2</td>
+                    <td>20%</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm">Editar</button>
+                        <button class="btn btn-danger btn-sm">Borrar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-
 </body>
 
 </html>
