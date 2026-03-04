@@ -1,92 +1,73 @@
-<!--Instrucciones: Usar este archivo y cambiar el nombre segun de la entidad que trabajen, luego duplicar o eliminar las
-columnas marcadas segun los atributos de la entidad y cambiar la clase activo dentro del div-->
-
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <title>Panel de Gestión</title>
+    <title>Gestión de Pasajeros</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
 <body>
+    <div class="container mt-4">
+        <a href="PaginaPrincipal.html" class="btn btn-secondary mb-3">← Volver</a>
+        <h2>Registros de Pasajeros</h2>
+        <hr>
 
-    <div class="container">
-        <nav class="sidebar">
-            <div class="logo">MENÚ</div>
-            <!--Usar los nombres que a parecen en href="lineas.html por ejemplo para crear los nombres d elos archivos que les toca-->
-            <a href="lineas.html">Lineas</a>
-            <!--La parte donde dice "class="active" quitarle y cambiarla a donde esta la entidad que estan trabajando en el momento-->
-            <a href="trenes.html">Trenes</a>
-            <a href="personal.html">Personal</a>
-            <a href="pasajeros.html" class="active">Pasajeros</a>
-            <a href="conductores.html">Conductores </a>
-            <a href="impacto.html">Impacto Trafico</a>
-            <a href="horarios.html">Horarios</a>
-            <a href="mantenimiento.html">Mantenimiento</a>
-            <a href="boletos.html">Boletos</a>
-            <a href="estaciones.html">Estaciones</a>
-        </nav>
-
-        <main class="content">
-            <header class="header">
-                <h1>Pasajeros</h1>
-            </header>
-
-            <div class="action-bar">
-                <button>Registrar</button>
-                <button>Editar</button>
-                <button>Eliminar</button>
-                <button>Buscar</button>
+        <div class="card mb-4 border-success">
+            <div class="card-body">
+                <form id="formPasajero" class="row g-3">
+                    <div class="col-md-4">
+                        <label class="form-label">ID Pasajero</label>
+                        <input type="number" class="form-control" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Nombre</label>
+                        <input type="text" class="form-control" placeholder="Ej: Juan Pérez" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Tipo de Pasajero</label>
+                        <select class="form-select" required>
+                            <option value="">Seleccione</option>
+                            <option value="NIÑO">Niño</option>
+                            <option value="ADULTO">Adulto</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-success">Registrar Pasajero</button>
+                    </div>
+                </form>
             </div>
+        </div>
 
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Tipo de Pasajero</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Carlos Méndez</td>
-                            <td>Niño</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Roberto Alcatraz</td>
-                            <td>Adulto</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Sofía Ramírez</td>
-                            <td>Adulto</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Luis Herrera</td>
-                            <td>Niño</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Valeria Gómez</td>
-                            <td>Adulto</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Andrés Castillo</td>
-                            <td>Adulto</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </main>
+        <table class="table">
+            <thead class="table-success">
+                <tr>
+                    <th>ID Pasajero</th>
+                    <th>Nombre</th>
+                    <th>Tipo de Pasajero</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Juan Pérez</td>
+                    <td>Adulto</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ana López</td>
+                    <td>Niño</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Carlos Méndez</td>
+                    <td>Adulto</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>María González</td>
+                    <td>Niño</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-
 </body>
-
 </html>
